@@ -13,8 +13,8 @@ module.exports = {
     },
     POST: async(req, res) => {
         try {
-            const { post_title, post_text, post_img } = req.body
-            res.json(model.addPost(post_title, post_text, post_img))
+            const { post_title, post_text } = req.body
+            res.json(model.addPost(post_title, post_text))
         }catch(err) {
             console.log(err.message);
             res.sendStatus(500)
